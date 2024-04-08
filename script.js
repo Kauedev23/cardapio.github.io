@@ -177,21 +177,12 @@ checkoutBtn.addEventListener("click", function(){
     // Constrói a mensagem com os itens do carrinho e o valor total
     const cartItems = cart.map((item) => {
         return (
-<<<<<<< HEAD
             `*${item.name}*\nQuantidade: (${item.quantity})\nPreço: R$${item.price.toFixed(2)}\n\n`
         );
     }).join("");
     const totalValue = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
     const message = encodeURIComponent(`Olá, esse é o meu pedido:\n\n${cartItems}Total: R$${totalValue.toFixed(2)}\n`);
     const phone = "+5511987057553";
-=======
-            `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
-        )
-    }).join("")
-
-    const message = encodeURIComponent(cartItems)
-    const phone = "11987057553"
->>>>>>> 8dbd505e004bff2451b1e94e4e5dab8b83e6cb34
     
     // Abre o link para enviar a mensagem no WhatsApp
     window.open(`https://wa.me/${phone}?text=${message}Endereço: ${addresInput.value}`, "_blank");
