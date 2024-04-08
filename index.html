@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!--INICIO CABEÇALHO FONTES, ESTILOS, LINKS EXTERNOS-->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,53 +12,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!--META TAG-->
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Kauê Burguer - A melhor hamburgueria!"/>
-    <meta property="og:image" content="https://cardapio-github-io.vercel.app/assets/hamb-1.png"/>
-    <meta property="og:description" content="O melhor Hamburguer caseiro!"/>
-    <meta property="og:site_name" content="Kaue Burguer"/>
-    
+        <!--INICIO META TAG (COMPLEMENTOS)-->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Kauê Burguer - A melhor hamburgueria!"/>
+        <meta property="og:image" content="https://cardapio-github-io.vercel.app/assets/hamb-1.png"/>
+        <meta property="og:description" content="O melhor Hamburguer caseiro!"/>
+        <meta property="og:site_name" content="Kaue Burguer"/>
+        <!--FIM META TAG (COMPLEMENTOS)-->
     
     <link rel="stylesheet" href="./styles/output.css">
     <title>Kauê Burguer - A melhor hamburgueria!</title>
+    <!--FIM CABEÇALHO FONTES, ESTILOS, LINKS EXTERNOS-->
 </head>
 <body>
    
    
 
-    <!-- HEADER-->
-    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
-        <div class="w-full h-full flex flex-col justify-center items-center">
-            <img  
-            src="./assets/hamb-1.png" 
-            alt="Logo DevBurguer"
-            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
-            />
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
-                Kauê Burguer
-            </h1>
+<!-- INICIO HEADER (MENU DE CIMA)-->
+        <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+            <div class="w-full h-full flex flex-col justify-center items-center">
+                <img  
+                src="./assets/hamb-1.png" 
+                alt="Logo DevBurguer"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+                />
+                <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                    Kauê Burguer
+                </h1>
 
-            <span class="text-white font-medium">Rua Serafim Ponte Grande Nº 326, São Paulo - SP</span>
+                <span class="text-white font-medium">Rua Serafim Ponte Grande Nº 326, São Paulo - SP</span>
 
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">ABERTO!!</span>
+                <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                    <span class="text-white font-medium">das 12:00 ás 22:00</span>
+                </div>
+
             </div>
+        </header>
+<!-- FIM HEADER (MENU DE CIMA)-->
 
-        </div>
-    </header>
-    <!-- FIM HEADER-->
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+                Conheça nosso menu
+        </h2>
 
-    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-        Conheça nosso menu
-    </h2>
 
-    <!--INICIO MENU-->
+<!--INICIO MENU PRINCIPAL-->
     <div id="menu">
+                                        <!-- MENU DE LANCHES-->
 
         <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:dap-10 mx-auto max-w-7xl px- mb-16">
 
-            <!--PRODUTO ITEM-->
+    <!--PRODUTO ITEM 1-->
             <div class="flex gap-2">
                 <img 
                     src="./assets/hamb-1.png" 
@@ -82,9 +88,9 @@
                 </div>
 
             </div>
-            <!--FIM PRODUTO ITEM-->
+    <!--FIM PRODUTO ITEM 1 -->
 
-             <!--PRODUTO ITEM-->
+    <!--PRODUTO ITEM 2 -->
              <div class="flex gap-2">
                 <img 
                     src="./assets/hamb-2.png" 
@@ -111,9 +117,9 @@
                 </div>
 
             </div>
-            <!--FIM PRODUTO ITEM-->
+    <!--FIM PRODUTO ITEM 2 -->
 
-            <!--PRODUTO ITEM-->
+    <!--PRODUTO ITEM 3 -->
             <div class="flex gap-2">
                 <img 
                     src="./assets/hamb-3.png" 
@@ -140,9 +146,9 @@
                 </div>
 
             </div>
-            <!--FIM PRODUTO ITEM-->
+    <!--FIM PRODUTO ITEM 3 -->
 
-             <!--PRODUTO ITEM-->
+    <!--PRODUTO ITEM 4 -->
              <div class="flex gap-2">
                 <img 
                     src="./assets/hamb-4.png" 
@@ -169,9 +175,126 @@
                 </div>
 
             </div>
-            <!--FIM PRODUTO ITEM-->
-        
+    <!--FIM PRODUTO ITEM 4 -->
+
+    <!--PRODUTO ITEM 5 -->
+    <div class="flex gap-2">
+        <img 
+            src="./assets/hamb-5.png" 
+            alt="Americano"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-330"
+        />
+
+        <div>
+            <p class="font-bold">Americano</p>
+            <p class="text-sm">Pão levinho de fermentação natural de trigo, burguer 160g, quejo prato e
+            maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 25,00</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Americano"
+                data-price="25"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+
+     </div>
+    <!--FIM PRODUTO ITEM 5 -->
+
+    <!--PRODUTO ITEM 6 -->
+    <div class="flex gap-2">
+        <img 
+            src="./assets/hamb-6.png" 
+            alt="The king"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-330"
+        />
+
+        <div>
+            <p class="font-bold">The kink</p>
+            <p class="text-sm">Pão levinho de fermentação natural de trigo, burguer 160g, quejo prato e
+            maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 34,00</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="The kinkg"
+                data-price="34"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+
+        </div>
+    <!--FIM PRODUTO ITEM 6 -->
+
+    <!--PRODUTO ITEM 7 -->
+    <div class="flex gap-2">
+        <img 
+            src="./assets/hamb-7.png" 
+            alt="onion"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-330"
+        />
+
+        <div>
+            <p class="font-bold">onion</p>
+            <p class="text-sm">Pão levinho de fermentação natural de trigo, burguer 160g, quejo prato e
+            maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 32,00</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="onion"
+                data-price="32"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+
+        </div>
+    <!--FIM PRODUTO ITEM 7 -->
+
+    <!--PRODUTO ITEM 8 -->
+    <div class="flex gap-2">
+        <img 
+            src="./assets/hamb-8.png" 
+            alt="Vegetariano"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-330"
+        />
+
+        <div>
+            <p class="font-bold">Vegetariano</p>
+            <p class="text-sm">Pão levinho de fermentação natural de trigo, burguer 160g, quejo prato e
+            maionese da casa.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 29,50</p>
+                <button 
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Vegetariano"
+                data-price="29.50"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+            </div>
+        </div>
+
+        </div>
+    <!--FIM PRODUTO ITEM 8 -->
         </main>
+
+                                                <!-- MENU DE BEBIDAS-->
 
         <div class="mx-auto max-w-7xl px-2 my-2">
             <h2 class="font-bold text-3xl">
@@ -181,7 +304,8 @@
 
         <!--GRID BEBIDAS-->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:dap-10 mx-auto max-w-7xl px- mb-16" id="menu">
-        <!--BEBIDA ITEM-->
+        
+    <!--BEBIDA ITEM 1 -->
         <div class="flex gap-2 w-full">
         <img 
             src="./assets/refri-1.png" 
@@ -206,9 +330,9 @@
         </div>
 
         </div>
-            <!--FIM BEBIDA ITEM-->
+    <!--FIM BEBIDA ITEM 1 -->
 
-        <!--BEBIDA ITEM-->
+    <!--BEBIDA ITEM 2 -->
         <div class="flex gap-2 w-full">
         <img 
             src="./assets/refri-2.png" 
@@ -233,16 +357,16 @@
         </div>
 
         </div>
-            <!--FIM BEBIDA ITEM-->
+    <!--FIM BEBIDA ITEM 2 -->
 
     </div>
     <!--FIM GRID BEBIDAS-->
 
 
     </div>
-    <!--FIM MENU-->
+    <!--FIM MENU PRINCIPAL-->
 
-    <!--MODAL CART-->
+                                        <!--MODAL CART (CHECKOUT REVISÃO DE PEDIDO)-->
     <div 
         class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
         id="cart-modal"
@@ -273,9 +397,9 @@
 
     </div>
 
-    <!--FIM MODAL CART-->
+                                    <!--MODAL CART (CHECKOUT REVISÃO DE PEDIDO)-->
 
-    <!--BUTTON CART FOOTER-->
+                                    <!--BUTTON CART FOOTER (BOTÃO DO CARRINHO )-->
     <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
         <button 
             class="flex items-center gap-2 text-white font-bold"
@@ -286,12 +410,13 @@
             <i class="fa fa-cart-plus text-lg text-white"></i>
         </button>
     </footer>
-     <!--FIM BUTTON CART FOOTER-->
+                                 <!--FIM BUTTON CART FOOTER (BOTÃO DO CARRINHO )-->
 
-     <!--JAVA SCRIPT-->
+    
+                                            <!--JAVA SCRIPT-->
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
      <script src="script.js"></script>
-
+                                        <!-- FIM JAVA SCRIPT-->
 
 </body>
 </html>

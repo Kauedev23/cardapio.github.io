@@ -146,58 +146,58 @@ addresInput.addEventListener("input", function(event)
 
 
 
-        //Finalizar pedido
-
+  //Enviar pedido para o WhatsApp
 checkoutBtn.addEventListener("click", function(){
-
+    // Verifica se o restaurante está aberto
     const isOpen = checkRestaurantOpen();
-    if(!isOpen){
-   
+    if (!isOpen) {
+        // Se o restaurante estiver fechado, exibe uma mensagem de aviso
         Toastify({
             text: "Ops, o restaurante está fechado",
             duration: 3000,
             close: true,
             gravity: "top", // `top` or `bottom`
-            position: "rigth", // `left`, `center` or `right`
+            position: "right", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
             style: {
-              background: "#ef4444",
+                background: "#ef4444",
             },
         }).showToast();
-
-
-    return;
-    }
-
-    if(cart.length === 0) return;
-    if(addresInput.value === ""){
-        addressWarn.classList.remove("hidden")
-        addresInput.classList.add("border-red-500")
         return;
     }
 
-    //Enviar pedido para o whatsaap
+    // Verifica se há itens no carrinho e se o endereço foi fornecido
+    if (cart.length === 0) return;
+    if (addresInput.value === "") {
+        addressWarn.classList.remove("hidden");
+        addresInput.classList.add("border-red-500");
+        return;
+    }
 
-    const cartItems = cart.map((item)=>{
+    // Constrói a mensagem com os itens do carrinho e o valor total
+    const cartItems = cart.map((item) => {
         return (
-            `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
-        )
-    }).join("")
-
-    const message = encodeURIComponent(cartItems)
-    const phone = "11965150975"
+            `*${item.name}*\nQuantidade: (${item.quantity})\nPreço: R$${item.price.toFixed(2)}\n\n`
+        );
+    }).join("");
+    const totalValue = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    const message = encodeURIComponent(`Olá, esse é o meu pedido:\n\n${cartItems}Total: R$${totalValue.toFixed(2)}\n`);
+    const phone = "+5511987057553";
     
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addresInput.value}`, "_blank")
+    // Abre o link para enviar a mensagem no WhatsApp
+    window.open(`https://wa.me/${phone}?text=${message}Endereço: ${addresInput.value}`, "_blank");
 
+    // Limpa o carrinho e atualiza o modal do carrinho
     cart = [];
     uptadeCartModal();
-})
+});
+
 
 //Manipular horario
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 0.0 && hora <22;
+    return hora >= 12 && hora <22;
     //true = Restaurante aberto
 } 
 //ALTERAR AQUI!
