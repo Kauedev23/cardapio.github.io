@@ -185,7 +185,7 @@ checkoutBtn.addEventListener("click", function(){
     const phone = "+5511987057553";
     
     // Abre o link para enviar a mensagem no WhatsApp
-    window.open(`https://wa.me/${phone}?text=${message}Endereço: *${addresInput.value}*`, "_blank");
+    window.open(`https://wa.me/${phone}?text=${message}Endereço:*${addresInput.value}*`, "_blank");
 
     // Limpa o carrinho e atualiza o modal do carrinho
     cart = [];
